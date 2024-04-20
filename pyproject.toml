@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "file-sentry"
+version = "0.1.0"
+description = "File system monitoring and organization tool"
+authors = ["Brijesh <brpatel0807@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+watchdog = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+package-mode = false

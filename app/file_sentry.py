@@ -2,7 +2,7 @@ import sys
 import time
 import logging
 from watchdog.observers import Observer
-from handler import Handler
+from monitor import Monitor
 
 
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
                         datefmt='%Y-%m-%d %H:%M:%S')
     path = sys.argv[1] if len(sys.argv) > 1 else '.'
     logging.info(f'start watching directory {directory!r}')
-    event_handler = Handler()
+    event_handler = Monitor()
     observer = Observer()
     observer.schedule(event_handler, directory, recursive=False)
     observer.start()

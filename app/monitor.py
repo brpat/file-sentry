@@ -1,4 +1,6 @@
 from watchdog.events import FileSystemEvent, FileSystemEventHandler
+from file_handler import FileHandler
+# from app_logger import AppLogger
 
 class Monitor(FileSystemEventHandler):
     def on_any_event(self, event) -> None:
@@ -7,7 +9,6 @@ class Monitor(FileSystemEventHandler):
         is_directory = event.is_directory
         is_synthetic = event.is_synthetic
 
-        # print(event)
         if is_directory == True:
             print("Directory Event:", src_path)
 

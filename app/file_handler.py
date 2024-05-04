@@ -1,7 +1,7 @@
 import hashlib
 
 class FileHandler:
-    def hash_file(src_path, hashtype="sha256"):
+    def hash_file(src_path: str, hashtype: str = "sha256") -> str:
     # Open the file in binary mode
         with open(src_path, "rb") as f:
             hash_object = None
@@ -17,10 +17,14 @@ class FileHandler:
         # Return the hexadecimal representation of the hash
         return hash_object.hexdigest()
 
-    def scan_file(src_path):
+    def scan_file_vt(src_path: str):
         #Upload file to virus total
         pass
     
-    def diff_file(src_path):
+    def diff_file(src_path: str):
         pass
-
+    
+    def scan_file_local(src_path: str):
+        pass
+    
+    
